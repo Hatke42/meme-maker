@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <canvas></canvas>
-    <input type="range" id="line-width" min="1" max="10" value="5" />
-    <div>
+    <div class="color-choice">
       <input type="color" id="pick_color" />
       <div
         class="color-options"
@@ -68,16 +66,29 @@
         data-color="#6D214F"
       ></div>
     </div>
-    <div>
+    <canvas></canvas>
+    <div class="boxes">
+      <input type="range" id="line-width" min="1" max="10" value="5" />
       <button id="mode-btn">Fill</button>
       <button id="erase-btn">Eraser</button>
       <button id="destroy-btn">Clear Canvas</button>
-    </div>
-    <div class="space">
+      <label for="inputfile" class="uploadphoto"
+        ><ion-icon name="add"></ion-icon> Add Photo</label
+      >
       <input type="file" accept="image/*" id="inputfile" />
-      <input type="text" placeholder="Write Text" id="inputtext" />
-      <button id="download-btn">Download</button>
+      <input type="text" placeholder="Add text here... :)" id="inputtext" />
+      <button id="download-btn">
+        <ion-icon name="save-outline"></ion-icon> Save image
+      </button>
     </div>
     <script src="app.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
